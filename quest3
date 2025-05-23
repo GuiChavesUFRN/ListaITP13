@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int mdc(int x, int y) {
+    int div = 1, i = 2;
+
+    while(x != 1 || y != 1) {
+        if (x % i == 0 && y % i == 0) {
+            div *= i;
+            x /= i;
+            y /= i;
+        }
+        else if (x % i == 0) {x /= i;}
+        else if (y % i == 0) {y /= i;}
+        else {i++;}
+    }
+
+    return div;
+}
+int main() {
+    int A, B;
+    cin >> A >> B;
+
+    cout << mdc(A, B) << endl;
+
+    return 0;
+}
