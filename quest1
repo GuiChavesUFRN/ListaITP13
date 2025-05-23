@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float Elev(float b, int e) {
+    return pow(b, e);
+}
+int main() {
+    int P;
+    float B;
+    cin >> B >> P;
+
+    cout << Elev(B, P) << endl;
+}
