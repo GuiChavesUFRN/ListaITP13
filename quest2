@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+float max(int a[], int l) {
+    int maxnum = a[0];
+
+    for (int i = 0; i < l; i++) {
+        if (a[i] > maxnum) {
+            maxnum = a[i];
+        }
+    }
+
+    return maxnum;
+}
+int main() {
+    int N;
+    cin >> N;
+    int V[N];
+
+    for (int i = 0; i < N; i++) {
+        cin >> V[i];
+    }
+
+    cout << max(V, N) << endl;
+}
